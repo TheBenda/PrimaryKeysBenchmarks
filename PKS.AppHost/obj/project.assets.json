@@ -131,6 +131,41 @@
           "buildMultiTargeting/Aspire.Hosting.AppHost.targets": {}
         }
       },
+      "Aspire.Hosting.Keycloak/9.0.0-preview.5.24551.3": {
+        "type": "package",
+        "dependencies": {
+          "AspNetCore.HealthChecks.Uris": "8.0.1",
+          "Aspire.Hosting": "9.0.0",
+          "Google.Protobuf": "3.28.2",
+          "Grpc.AspNetCore": "2.66.0",
+          "Grpc.Net.ClientFactory": "2.66.0",
+          "Grpc.Tools": "2.67.0",
+          "Humanizer.Core": "2.14.1",
+          "JsonPatch.Net": "3.1.1",
+          "KubernetesClient": "15.0.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "8.0.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.11",
+          "Microsoft.Extensions.Hosting": "8.0.1",
+          "Microsoft.Extensions.Hosting.Abstractions": "8.0.1",
+          "Microsoft.Extensions.Http": "8.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Options": "8.0.2",
+          "Microsoft.Extensions.Primitives": "8.0.0",
+          "Polly.Core": "8.4.2"
+        },
+        "compile": {
+          "lib/net8.0/Aspire.Hosting.Keycloak.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Aspire.Hosting.Keycloak.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Aspire.Hosting.Orchestration.osx-arm64/9.0.0": {
         "type": "package",
         "build": {
@@ -172,6 +207,46 @@
         },
         "runtime": {
           "lib/net8.0/Aspire.Hosting.PostgreSQL.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Aspire.Hosting.SqlServer/9.0.0": {
+        "type": "package",
+        "dependencies": {
+          "AspNetCore.HealthChecks.SqlServer": "8.0.2",
+          "AspNetCore.HealthChecks.Uris": "8.0.1",
+          "Aspire.Hosting": "9.0.0",
+          "Azure.Core": "1.44.1",
+          "Azure.Identity": "1.13.1",
+          "Google.Protobuf": "3.28.2",
+          "Grpc.AspNetCore": "2.66.0",
+          "Grpc.Net.ClientFactory": "2.66.0",
+          "Grpc.Tools": "2.67.0",
+          "Humanizer.Core": "2.14.1",
+          "JsonPatch.Net": "3.1.1",
+          "KubernetesClient": "15.0.1",
+          "Microsoft.Data.SqlClient": "5.2.2",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Configuration.Binder": "8.0.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.11",
+          "Microsoft.Extensions.Hosting": "8.0.1",
+          "Microsoft.Extensions.Hosting.Abstractions": "8.0.1",
+          "Microsoft.Extensions.Http": "8.0.1",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Options": "8.0.2",
+          "Microsoft.Extensions.Primitives": "8.0.0",
+          "Polly.Core": "8.4.2",
+          "System.Text.Json": "8.0.5"
+        },
+        "compile": {
+          "lib/net8.0/Aspire.Hosting.SqlServer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Aspire.Hosting.SqlServer.dll": {
             "related": ".xml"
           }
         }
@@ -255,6 +330,23 @@
         },
         "runtime": {
           "lib/net8.0/HealthChecks.NpgSql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "AspNetCore.HealthChecks.SqlServer/8.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Data.SqlClient": "5.2.0",
+          "Microsoft.Extensions.Diagnostics.HealthChecks": "8.0.0"
+        },
+        "compile": {
+          "lib/net6.0/HealthChecks.SqlServer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/HealthChecks.SqlServer.dll": {
             "related": ".xml"
           }
         }
@@ -2189,6 +2281,22 @@
         "lib/net9.0/Aspire.Hosting.AppHost.xml"
       ]
     },
+    "Aspire.Hosting.Keycloak/9.0.0-preview.5.24551.3": {
+      "sha512": "K1xBAgwRQN4fWLXIznDnLwiIMNJJs9YJMo3LWAKYdVeNzdmdukemjOA4kdWSrYvJNCLmsoHJzpR+nbnx8FUCkw==",
+      "type": "package",
+      "path": "aspire.hosting.keycloak/9.0.0-preview.5.24551.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "aspire.hosting.keycloak.9.0.0-preview.5.24551.3.nupkg.sha512",
+        "aspire.hosting.keycloak.nuspec",
+        "lib/net8.0/Aspire.Hosting.Keycloak.dll",
+        "lib/net8.0/Aspire.Hosting.Keycloak.xml"
+      ]
+    },
     "Aspire.Hosting.Orchestration.osx-arm64/9.0.0": {
       "sha512": "iQgGQhJIV/VHUVGmAjJC8wwYiHbyRAuzq6RRnRe4egSswxOwzamLYrcubCS4hAs4A0gTPxb47lZNGskRfbqwVg==",
       "type": "package",
@@ -2226,6 +2334,22 @@
         "aspire.hosting.postgresql.nuspec",
         "lib/net8.0/Aspire.Hosting.PostgreSQL.dll",
         "lib/net8.0/Aspire.Hosting.PostgreSQL.xml"
+      ]
+    },
+    "Aspire.Hosting.SqlServer/9.0.0": {
+      "sha512": "ixuEP7Se59CQrRaDoxEu8mKmMbOtpe1rG2ImXPL5ih2eHsOqaWY6Ge9U5BEkugQWafN1TagbD5nvfYPgqJDbKA==",
+      "type": "package",
+      "path": "aspire.hosting.sqlserver/9.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "aspire.hosting.sqlserver.9.0.0.nupkg.sha512",
+        "aspire.hosting.sqlserver.nuspec",
+        "lib/net8.0/Aspire.Hosting.SqlServer.dll",
+        "lib/net8.0/Aspire.Hosting.SqlServer.xml"
       ]
     },
     "Aspire.Microsoft.EntityFrameworkCore.SqlServer/9.0.0": {
@@ -2287,6 +2411,22 @@
         "lib/net8.0/HealthChecks.NpgSql.xml",
         "lib/netstandard2.0/HealthChecks.NpgSql.dll",
         "lib/netstandard2.0/HealthChecks.NpgSql.xml"
+      ]
+    },
+    "AspNetCore.HealthChecks.SqlServer/8.0.2": {
+      "sha512": "sTcVVq7/zhfUrSTs0WAktvPdpU1He/sj14gRTogq4eFhn0oImolxNNhJczkYMgFF92RMMW+O+rlcFO7HVOpfiQ==",
+      "type": "package",
+      "path": "aspnetcore.healthchecks.sqlserver/8.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "aspnetcore.healthchecks.sqlserver.8.0.2.nupkg.sha512",
+        "aspnetcore.healthchecks.sqlserver.nuspec",
+        "icon.png",
+        "lib/net6.0/HealthChecks.SqlServer.dll",
+        "lib/net6.0/HealthChecks.SqlServer.xml",
+        "lib/netstandard2.0/HealthChecks.SqlServer.dll",
+        "lib/netstandard2.0/HealthChecks.SqlServer.xml"
       ]
     },
     "AspNetCore.HealthChecks.Uris/8.0.1": {
@@ -4811,8 +4951,10 @@
     "net9.0": [
       "Aspire.Dashboard.Sdk.osx-arm64 >= 9.0.0",
       "Aspire.Hosting.AppHost >= 9.0.0",
+      "Aspire.Hosting.Keycloak >= 9.0.0-preview.5.24551.3",
       "Aspire.Hosting.Orchestration.osx-arm64 >= 9.0.0",
       "Aspire.Hosting.PostgreSQL >= 9.0.0",
+      "Aspire.Hosting.SqlServer >= 9.0.0",
       "Aspire.Microsoft.EntityFrameworkCore.SqlServer >= 9.0.0",
       "Aspire.Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.0"
     ]
@@ -4829,7 +4971,6 @@
       "packagesPath": "/Users/abenda/.nuget/packages/",
       "outputPath": "/Users/abenda/Documents/GitHub/PrimaryKeysBenchmarks/PKS.AppHost/obj/",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
         "/Users/abenda/.nuget/NuGet/NuGet.Config"
       ],
@@ -4855,7 +4996,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -4870,12 +5012,20 @@
             "target": "Package",
             "version": "[9.0.0, )"
           },
+          "Aspire.Hosting.Keycloak": {
+            "target": "Package",
+            "version": "[9.0.0-preview.5.24551.3, )"
+          },
           "Aspire.Hosting.Orchestration.osx-arm64": {
             "target": "Package",
             "version": "[9.0.0, )",
             "autoReferenced": true
           },
           "Aspire.Hosting.PostgreSQL": {
+            "target": "Package",
+            "version": "[9.0.0, )"
+          },
+          "Aspire.Hosting.SqlServer": {
             "target": "Package",
             "version": "[9.0.0, )"
           },

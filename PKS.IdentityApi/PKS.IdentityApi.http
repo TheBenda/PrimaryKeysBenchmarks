@@ -1,0 +1,6 @@
+@PKS.IdentityApi_HostAddress = http://localhost:5124
+
+GET {{PKS.IdentityApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

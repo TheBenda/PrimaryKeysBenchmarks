@@ -13,7 +13,6 @@
         "packagesPath": "/Users/abenda/.nuget/packages/",
         "outputPath": "/Users/abenda/Documents/GitHub/PrimaryKeysBenchmarks/PKS.AppHost/obj/",
         "projectStyle": "PackageReference",
-        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "/Users/abenda/.nuget/NuGet/NuGet.Config"
         ],
@@ -39,7 +38,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -54,12 +54,20 @@
               "target": "Package",
               "version": "[9.0.0, )"
             },
+            "Aspire.Hosting.Keycloak": {
+              "target": "Package",
+              "version": "[9.0.0-preview.5.24551.3, )"
+            },
             "Aspire.Hosting.Orchestration.osx-arm64": {
               "target": "Package",
               "version": "[9.0.0, )",
               "autoReferenced": true
             },
             "Aspire.Hosting.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Aspire.Hosting.SqlServer": {
               "target": "Package",
               "version": "[9.0.0, )"
             },

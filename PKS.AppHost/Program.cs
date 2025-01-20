@@ -1,10 +1,25 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
-var dataSource = builder.AddPostgres("PostgresDbConnection")
+var sqlServer = builder.AddSqlServer("SqlServerDbConnection")
     .WithDataVolume()
-    .AddDatabase("DataSourceDb");
+    .WithExternalHttpEndpoints()
+    .WithLifetime(ContainerLifetime.Persistent);
 
-builder.AddProject<Projects.PKS_Console>("Benchmarker")
-    .WithReference(dataSource);
+var sqlServerDb = sqlServer.AddDatabase("BenchmarkSqlServerDb");
+
+var postgres = builder.AddPostgres("PostgresDbConnection")
+    .WithDataVolume()
+    .WithOtlpExporter()
+    .WithPgWeb()
+    .WithExternalHttpEndpoints()
+    .WithLifetime(ContainerLifetime.Persistent);
+
+var postgresDb = postgres.AddDatabase("BenchmarkDb");
+
+var migrations = builder.AddProject<Projects.PKS_Benchmarks_Migrations>("BenchmarksMigrations")
+    .WithReference(postgresDb)
+    .WithReference(sqlServerDb)
+    .WaitFor(sqlServerDb)
+    .WaitFor(postgresDb);
 
 builder.Build().Run();

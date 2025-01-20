@@ -22,8 +22,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\PKS.Benchmarks.Migrations\PKS.Benchmarks.Migrations.csproj" />
-      <ProjectReference Include="..\PKS.IdentityApi\PKS.IdentityApi.csproj" />
-      <ProjectReference Include="..\PKS.WebApi\PKS.WebApi.csproj" />
     </ItemGroup>
 
 </Project>
